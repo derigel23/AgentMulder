@@ -1,6 +1,7 @@
 ﻿using System;
 using AgentMulder.Containers.CastleWindsor.Patterns.FromTypes.BasedOn;
 using JetBrains.ProjectModel;
+using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.Services.CSharp.StructuralSearch;
 using JetBrains.ReSharper.Psi.Services.CSharp.StructuralSearch.Placeholders;
 using JetBrains.ReSharper.Psi.Services.StructuralSearch;
@@ -18,9 +19,9 @@ namespace AgentMulder.Containers.CastleWindsor.Patterns.FromTypes
         {
         }
 
-        protected override IModule GetTargetModule(IStructuralMatchResult match)
+        protected override IPsiModule GetTargetModule(IStructuralMatchResult match)
         {
-            return match.MatchedElement.GetPsiModule().ContainingProjectModule;
+            return match.MatchedElement.GetPsiModule();
         }
     }
 }

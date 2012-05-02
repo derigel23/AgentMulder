@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using JetBrains.ProjectModel;
+using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 
 namespace AgentMulder.ReSharper.Domain.Modules
@@ -13,7 +14,7 @@ namespace AgentMulder.ReSharper.Domain.Modules
             new TypeOfExtractor(),
         };
 
-        public static IModule GetTargetModule(ICSharpExpression expression)
+        public static IPsiModule GetTargetModule(ICSharpExpression expression)
         {
             return extractors.Select(extractor => extractor.GetTargetModule(expression)).FirstOrDefault(result => result != null);
         }

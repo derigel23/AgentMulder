@@ -30,4 +30,3 @@ namespace AgentMulder.ReSharper.Domain.Modules
         }
     }
 }
-
