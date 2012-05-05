@@ -34,13 +34,13 @@ namespace AgentMulder.Containers.CastleWindsor.Patterns.FromTypes
                         IEnumerable<ICSharpArgument> matchedArguments = match.GetMatchedElementList("services").OfType<ICSharpArgument>();
                         IEnumerable<ITypeElement> typeElements = matchedArguments.SelectMany(argument => GetRegisteredTypes(match, argument.Value));
 
-                        yield return CreateRegistration(match, basedOnRegistration, typeElements);
+                        yield return CreateRegistration(basedOnRegistration, typeElements);
                     }
                 }
             }
         }
 
-        protected virtual IComponentRegistration CreateRegistration(IStructuralMatchResult match, BasedOnRegistration basedOnRegistration, IEnumerable<ITypeElement> typeElements)
+        protected virtual IComponentRegistration CreateRegistration(BasedOnRegistration basedOnRegistration, IEnumerable<ITypeElement> typeElements)
         {
             // get all non-abstract classes (same as AllTypes)
             typeElements = typeElements.OfType<IClass>().Where(c => !c.IsAbstract);

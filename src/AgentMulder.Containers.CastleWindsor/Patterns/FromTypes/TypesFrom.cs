@@ -20,7 +20,7 @@ namespace AgentMulder.Containers.CastleWindsor.Patterns.FromTypes
         {
         }
 
-        protected override IComponentRegistration CreateRegistration(IStructuralMatchResult match, BasedOnRegistration basedOnRegistration, IEnumerable<ITypeElement> typeElements)
+        protected override IComponentRegistration CreateRegistration(BasedOnRegistration basedOnRegistration, IEnumerable<ITypeElement> typeElements)
         {
             return new TypesBasedOnRegistration(typeElements, basedOnRegistration);
         }
