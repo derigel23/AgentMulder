@@ -28,7 +28,7 @@ namespace AgentMulder.Containers.CastleWindsor.Patterns.FromTypes
                 {
                     var basedOnRegistrations = basedOnPattern.GetComponentRegistrations(registrationRootElement).Cast<BasedOnRegistrationBase>();
 
-                    foreach (var registration in basedOnRegistrations)
+                    foreach (BasedOnRegistrationBase registration in basedOnRegistrations)
                     {
                         yield return new ModuleBasedOnRegistration(module, registration);
                     }

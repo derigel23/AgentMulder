@@ -1,7 +1,6 @@
 ﻿using System;
 using AgentMulder.Containers.CastleWindsor.Patterns.FromTypes.BasedOn;
 using JetBrains.ProjectModel;
-using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.Services.CSharp.StructuralSearch;
 using JetBrains.ReSharper.Psi.Services.CSharp.StructuralSearch.Placeholders;
 using JetBrains.ReSharper.Psi.Services.StructuralSearch;

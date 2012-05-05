@@ -55,6 +55,7 @@
     <Compile Include="Modules\IModuleExtractor.cs" />
     <Compile Include="Modules\ModuleExtractor.cs" />
     <Compile Include="Modules\TypeOfExtractor.cs" />
+    <Compile Include="Registrations\TypePredicateRegistration.cs" />
     <Compile Include="WherePredicateBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registrations\BasedOnRegistration.cs" />
@@ -72,7 +73,6 @@
     <Compile Include="Search\RegistrationBasePattern.cs" />
     <Compile Include="Search\IPatternSearcher.cs" />
     <Compile Include="Search\IRegistrationPattern.cs" />
-    <Compile Include="Search\TypeDeclarationsDomainVisitor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utils\" />
