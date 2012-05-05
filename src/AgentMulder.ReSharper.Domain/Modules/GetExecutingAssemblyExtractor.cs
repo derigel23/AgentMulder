@@ -8,7 +8,7 @@ namespace AgentMulder.ReSharper.Domain.Modules
 {
     internal class GetExecutingAssemblyExtractor : IModuleExtractor
     {
-        public IPsiModule GetTargetModule(ICSharpExpression expression)
+        public IModule GetTargetModule(ICSharpExpression expression)
         {
             var invocationExpression = expression as IInvocationExpression;
             if (invocationExpression != null)
@@ -23,7 +23,7 @@ namespace AgentMulder.ReSharper.Domain.Modules
                 if (method.Element.XMLDocId == "M:System.Reflection.Assembly.GetExecutingAssembly")
                 {
                     // returns the module in which the call is executed
-                    return expression.GetPsiModule();
+                    return expression.GetPsiModule().ContainingProjectModule;
                 }
             }
             return null;

@@ -22,7 +22,7 @@ namespace AgentMulder.Containers.CastleWindsor.Patterns.FromTypes
         {
         }
 
-        protected override IPsiModule GetTargetModule(IStructuralMatchResult match)
+        protected override IModule GetTargetModule(IStructuralMatchResult match)
         {
             var argument = (ICSharpArgument)match.GetMatchedElement("assembly");
 

@@ -14,7 +14,7 @@ namespace AgentMulder.ReSharper.Domain.Modules
             new TypeOfExtractor(),
         };
 
-        public static IPsiModule GetTargetModule(ICSharpExpression expression)
+        public static IModule GetTargetModule(ICSharpExpression expression)
         {
             return extractors.Select(extractor => extractor.GetTargetModule(expression)).FirstOrDefault(result => result != null);
         }

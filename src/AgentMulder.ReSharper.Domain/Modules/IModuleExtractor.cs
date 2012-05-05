@@ -1,10 +1,10 @@
-using JetBrains.ReSharper.Psi;
+using JetBrains.ProjectModel;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 
 namespace AgentMulder.ReSharper.Domain.Modules
 {
     public interface IModuleExtractor
     {
-        IPsiModule GetTargetModule(ICSharpExpression expression);
+        IModule GetTargetModule(ICSharpExpression expression);
     }
 }
