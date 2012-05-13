@@ -56,7 +56,7 @@ namespace AgentMulder.ReSharper.Tests.Windsor
         [TestCase("BasedOn\\FromThisAssemblyInSameNamespaceAsNonGenericWithSubnamespaces", new[] { "InSomeNamespace.cs", "InSomeOtherNamespace.cs" })]
         [TestCase("BasedOn\\FromAssemblyTypeOfBasedOn", new[] { "Foo.cs" })]
         [TestCase("BasedOn\\FromAssemblyGetExecutingAssemblyBasedOn", new[] { "Foo.cs" })]
-        [TestCase("BasedOn\\FromThisAssemblyWhere", new[] { "Foo.cs" })]
+        [TestCase("BasedOn\\FromThisAssemblyWhere", new[] { "FromThisAssemblyWhere.cs" })]
         public void TestWithRegistrations(string testName, params string[] fileNames)
         {
             RunTest(testName, registrations =>
